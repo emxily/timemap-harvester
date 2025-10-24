@@ -6,6 +6,10 @@ import json                                                                     
 import time                                                                                                     #Library for sleeping between requests
 import sys                                                                                                      #Library for accessing command-line arguments
 
+
+#Run the command: py.exe timemap-harvester.py <link_list_file>
+
+
 # #Start of main
 if __name__ == "__main__":
 
@@ -46,7 +50,7 @@ if __name__ == "__main__":
         for URI in GrabbedLinksFile:                                                                            #Loop through each line of the file
             URIList.add(URI.strip())                                                                            #Strip whitespace/newlines and add URi to the set
     print("Links Acquired!\n")                                                                                  #Print confirmation when done  
-    print("Starting MemGator requests. . .")                                                                    #Print that the fetching process has started
+    print("Starting MemGator requests. . .\n")                                                                  #Print that the fetching process has started
 
 #Read Keymap to reuse MD5 hashes if available 
     if os.path.exists(KeyMapFile):                                                                              #Check if KeyMap.txt already exists
@@ -122,8 +126,8 @@ if __name__ == "__main__":
             zeroURIs.append(URI)                                                                                #Add this URI to zero-memento list
         mementoCounts[mCount] = mementoCounts.get(mCount, 0) + 1                                                #Track how many URIs had this memento count
 
-        print("Sleeping for 10 seconds...")
-        time.sleep(10)
+        print("\tSleeping for 10 seconds...\n")                                                                 #Print that the program will pause 
+        time.sleep(10)                                                                                          #Pause for 10 seconds
         counter += 1                                                                                            #Increment counter for progress tracking
 
 #Close KeyMap file after processing all URIs
@@ -131,7 +135,8 @@ if __name__ == "__main__":
 
 #Summary of Data
     print("\nAll TimeMaps retrieved or attempted!")                                                             #Print completion message
-    print(f"Results saved as '.json' files in '{OutDirectory}' directory.")                                     #Show output directory
+    print(f"Results saved as '.json' files in '{OutDirectory}' directory.\n")                                   #Show output directory
+    print("Summary of processed URIs")                                                                          #Header for processed URIs summary
     print(f"Total URIs processed: {total}")                                                                     #Display total URIs processed
     print(f"Total with 0 TimeMaps: {zeroCount}")                                                                #Display total URIs with zero mementos
 
