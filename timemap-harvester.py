@@ -137,8 +137,8 @@ if __name__ == "__main__":
     print("\nAll TimeMaps retrieved or attempted!")                                                             #Print completion message
     print(f"Results saved as '.json' files in '{OutDirectory}' directory.\n")                                   #Show output directory
     print("Summary of processed URIs:")                                                                          #Header for processed URIs summary
-    print(f"{total} URIs processed")                                                                     #Display total URIs processed
-    print(f"{zeroCount} URIs with 0 TimeMaps")                                                                #Display total URIs with zero mementos
+    print(f"{total} URIs processed")                                                                            #Display total URIs processed
+    print(f"{zeroCount} URIs with 0 TimeMaps")                                                                  #Display total URIs with zero mementos
 
 #Output counts for each memento count
     print("\nSummary of memento counts:")                                                                       #Header for memento summary
