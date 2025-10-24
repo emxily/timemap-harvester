@@ -49,7 +49,7 @@ if __name__ == "__main__":
     with open(LinkFile, "r", encoding="utf-8") as GrabbedLinksFile:                                             #Open the file that contains the links
         for URI in GrabbedLinksFile:                                                                            #Loop through each line of the file
             URIList.add(URI.strip())                                                                            #Strip whitespace/newlines and add URi to the set
-    print("Links Acquired!\n")                                                                                  #Print confirmation when done  
+    print("\nLinks Acquired!\n")                                                                                  #Print confirmation when done  
     print("Starting MemGator requests. . .\n")                                                                  #Print that the fetching process has started
 
 #Read Keymap to reuse MD5 hashes if available 
