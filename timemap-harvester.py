@@ -136,18 +136,18 @@ if __name__ == "__main__":
 #Summary of Data
     print("\nAll TimeMaps retrieved or attempted!")                                                             #Print completion message
     print(f"Results saved as '.json' files in '{OutDirectory}' directory.\n")                                   #Show output directory
-    print("Summary of processed URIs")                                                                          #Header for processed URIs summary
-    print(f"Total URIs processed: {total}")                                                                     #Display total URIs processed
-    print(f"Total with 0 TimeMaps: {zeroCount}")                                                                #Display total URIs with zero mementos
-
-#Output list of URIs with 0 mementos
-    if zeroCount > 0:                                                                                           #If any URIs had no mementos
-        print("\nURIs with 0 mementos:")                                                                        #Header for zero-memento list
-        for u in zeroURIs:                                                                                      #Loop through list
-            print("  -", u)                                                                                     #Print each URI on a new line
+    print("Summary of processed URIs:")                                                                          #Header for processed URIs summary
+    print(f"{total} URIs processed")                                                                     #Display total URIs processed
+    print(f"{zeroCount} URIs with 0 TimeMaps")                                                                #Display total URIs with zero mementos
 
 #Output counts for each memento count
     print("\nSummary of memento counts:")                                                                       #Header for memento summary
     for mCount in sorted(mementoCounts.keys()):                                                                 #Loop through counts in ascending order
         plural = "mementos" if mCount != 1 else "memento"                                                       #Use correct singular/plural
         print(f"{mementoCounts[mCount]} links had {mCount} {plural}")                                           #Print summary line for each count
+
+#Output list of URIs with 0 mementos
+    if zeroCount > 0:                                                                                           #If any URIs had no mementos
+        print("\nURIs with 0 mementos:")                                                                        #Header for zero-memento list
+        for u in zeroURIs:                                                                                      #Loop through list
+            print("  -", u)                                                                                     #Print each URI on a new line

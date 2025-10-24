@@ -49,14 +49,43 @@ Before you begin, ensure you have met the following requirements:
 
 * To run the program from the terminal:
 
-        python.exe 
+        py.exe 
 
 
 
 ### <u>Example Output</u>
-``` ```
+```py.exe timemap-harvester.py testlinks.txt```
 ```
+Enter your email: [REDACTED]
 
+Links Acquired!
+
+Starting MemGator requests. . .
+
+Added new entry to KeyMap: 09a457c326e21a1e8c4346241d8a5175 -> https://github.blog/author/davelosert/
+Saved TimeMap as 09a457c326e21a1e8c4346241d8a5175.json
+        Sleeping for 10 seconds...
+
+Added new entry to KeyMap: 970831fb58b9cd98ffc38901a8e7dd62 -> https://github.blog/open-source/social-impact/
+Saved TimeMap as 970831fb58b9cd98ffc38901a8e7dd62.json
+        Sleeping for 10 seconds...
+
+Added new entry to KeyMap: 1ccf5df09b90c822a0358f1c183073db -> https://github.blog/news-insights/research/the-state-of-open-source-and-ai/
+Saved TimeMap as 1ccf5df09b90c822a0358f1c183073db.json
+        Sleeping for 10 seconds...
+
+
+All TimeMaps retrieved or attempted!
+Results saved as '.json' files in 'TimeMaps' directory.
+
+Summary of processed URIs
+Total URIs processed: 3
+Total with 0 TimeMaps: 0
+
+Summary of memento counts:
+1 links had 18 mementos
+1 links had 88 mementos
+1 links had 182 mementos
 ```
 
 
@@ -68,6 +97,16 @@ Before you begin, ensure you have met the following requirements:
 **Author:** Emily Nowak
 
 *Based on ...**Homework 3 - Web Archiving, part 1** by **Prof. Nasreen Arif** for CS:432 Web Science, at Old Dominion University*
+
+
+<br />
+
+
+# Future Updates
+
+* This program is currently written as a single main script; I plan to refactor it into custom functions for better readability, reusability, and testing in a future version.
+
+* More in-depth summaries including which links had 1 memento, which links had 2 mementos, and so on.
 
 
 <br />
